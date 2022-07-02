@@ -17,4 +17,4 @@ This app should allow the user to:
 * Add new measurement.
 * View and edit the details of an existing measurement.
 * Delete a measurement.
-* See unusual blood pressures highlighted or flagged.
+* See unusual blood pressures highlighted or flagged.
