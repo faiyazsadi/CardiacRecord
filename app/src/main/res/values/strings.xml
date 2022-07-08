@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">CardiacRecorder</string>
-<!--    <item name="login" type="id">login</item>-->
+    <item name="login" type="id">login</item>
 </resources>
