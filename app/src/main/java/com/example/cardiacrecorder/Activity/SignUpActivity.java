@@ -22,4 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
         signUpConfirmPassword = findViewById(R.id.signUpConfirmPassword);
 
     }
+
+
+
 }
