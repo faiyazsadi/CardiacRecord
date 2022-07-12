@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="30dp"
     android:orientation="vertical"
-    tools:context=".Activity.SignUpActivity">
-
+    tools:context=".Activity.AddDetailsActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="CardiacRecord"
         android:textColor="#4F60FA"
 
         android:textSize="50sp">
@@ -20,28 +18,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/EmailLayout"
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="74dp"
-
-        android:hint="Email:">
-
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signUpEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/UserNameLayout"
+        android:id="@+id/DateLayout"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
@@ -50,71 +27,106 @@
 
         android:layout_marginTop="34dp"
 
-        android:hint="UserName:">
+        android:hint="Date:">
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signUpUserName"
+            android:id="@+id/Date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/PasswordLayout"
+        android:id="@+id/TimeLayout"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
 
-        android:hint="Password:">
+        android:hint="Time:">
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signUpPassword"
+            android:id="@+id/Time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmPasswordLayout"
+        android:id="@+id/SystolicLayout"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
 
-        android:hint="Confirm Password:">
+        android:hint="Systolic:">
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signUpConfirmPassword"
+            android:id="@+id/Systolic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DiastolicLayout"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:hint="Diastolic:">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Diastolic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CommentLayout"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:hint="Comment:">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Comment"
+            android:layout_width="match_parent"
+            android:layout_height="120sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/signupButton"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="34dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/buttonnew"
-        android:text="Sign Up"
-        android:textSize="18dp"
+        android:text="Save"
+        android:textSize="16dp"
 
         android:textStyle="bold"
 
         />
-
-
 </LinearLayout>

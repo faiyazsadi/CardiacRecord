@@ -5,13 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.cardiacrecorder.R;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class SignUpActivity extends AppCompatActivity {
 
+    private TextInputEditText signUpEmail, signUpUserName, signUpPassword, signUpConfirmPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        // Fetch User Input
+        signUpEmail = findViewById(R.id.signUpEmail);
+        signUpUserName = findViewById(R.id.signUpUserName);
+        signUpPassword = findViewById(R.id.signUpPassword);
+        signUpConfirmPassword = findViewById(R.id.signUpConfirmPassword);
+
     }
 
 
