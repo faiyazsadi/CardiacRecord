@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.cardiacrecorder.Adapter.recyclerAdapter;
 import com.example.cardiacrecorder.Model.User;
@@ -16,14 +18,28 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ArrayList<User> usersList;
     private RecyclerView recyclerView;
+    private ImageButton AddNewRecord;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
+        AddNewRecord = findViewById(R.id.addNewRecord);
+
+
         usersList = new ArrayList<>();
         setUserInfo();
         setAdapter();
+
+
+        AddNewRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 
     private void setAdapter() {
