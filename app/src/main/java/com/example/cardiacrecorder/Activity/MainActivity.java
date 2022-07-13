@@ -8,13 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.cardiacrecorder.Adapter.recyclerAdapter;
-import com.example.cardiacrecorder.Model.User;
+import com.example.cardiacrecorder.Model.RecordModel;
 import com.example.cardiacrecorder.R;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<User> usersList;
+    private ArrayList<RecordModel> usersList;
     private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,28 +35,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUserInfo() {
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
-        usersList.add(new User("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
+        usersList.add(new RecordModel("23-12-1999", "80"));
     }
 }

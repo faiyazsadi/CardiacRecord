@@ -9,7 +9,11 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private TextInputEditText signUpEmail, signUpUserName, signUpPassword, signUpConfirmPassword;
+    private TextInputEditText signUpEmail;
+    private TextInputEditText signUpUserName;
+    private TextInputEditText signUpPassword;
+    private TextInputEditText signUpConfirmPassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

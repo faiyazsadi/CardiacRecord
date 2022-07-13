@@ -8,15 +8,15 @@ import android.widget.TextView;
 //import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cardiacrecorder.Model.User;
+import com.example.cardiacrecorder.Model.RecordModel;
 import com.example.cardiacrecorder.R;
 
 import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyViewHolder> {
-    private ArrayList<User> usersList;
+    private ArrayList<RecordModel> usersList;
 
-    public recyclerAdapter(ArrayList<User> usersList) {
+    public recyclerAdapter(ArrayList<RecordModel> usersList) {
         this.usersList = usersList;
     }
     public class  MyViewHolder extends RecyclerView.ViewHolder {

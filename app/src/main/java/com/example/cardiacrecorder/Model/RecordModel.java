@@ -1,8 +1,8 @@
 package com.example.cardiacrecorder.Model;
 
-public class User {
+public class RecordModel {
 
-    public String name;
+//    public String name;
     public String date;
     public String timestamp;
     public String heartrate;
@@ -10,16 +10,16 @@ public class User {
     public String diastolic;
     public String comment;
 
-    public User() {
+    public RecordModel() {
     }
 
-    public User(String date, String heartrate) {
+    public RecordModel(String date, String heartrate) {
         this.date = date;
         this.heartrate = heartrate;
     }
 
-    public User(String name, String date, String timestamp, String heartrate, String systolic, String diastolic, String comment) {
-        this.name = name;
+    public RecordModel(String date, String timestamp, String heartrate, String systolic, String diastolic, String comment) {
+//        this.name = name;
         this.date = date;
         this.timestamp = timestamp;
         this.heartrate = heartrate;
@@ -27,13 +27,13 @@ public class User {
         this.diastolic = diastolic;
         this.comment = comment;
     }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public String getDate() {
         return date;
