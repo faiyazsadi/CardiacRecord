@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardiacRecorder">
         <activity
+
             android:name=".AddDetailsActivity"
+            android:exported="false" />
+        
+        <activity
+            android:name=".Activity.DetailsActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SignUpActivity"
