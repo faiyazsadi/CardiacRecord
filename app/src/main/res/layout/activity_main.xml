@@ -29,7 +29,7 @@
         android:id="@+id/addNewRecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:clickable="true"
 
         android:layout_marginLeft="250dp"
         android:layout_marginTop="537dp"

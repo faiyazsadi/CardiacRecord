@@ -2,49 +2,50 @@ package com.example.cardiacrecorder.Model;
 
 public class UserSignUpModel {
 
-    public String signUpEmail;
-    public String signUpUserName;
-    public String signUpPassword;
-    public String signUpConfirmPassword;
+    public String email;
+    public String userName;
+    public String password;
+    public String userKey;
 
-
-    public UserSignUpModel(String signUpEmail, String signUpUserName, String signUpPassword, String signUpConfirmPassword) {
-        this.signUpEmail = signUpEmail;
-        this.signUpUserName = signUpUserName;
-        this.signUpPassword = signUpPassword;
-        this.signUpConfirmPassword = signUpConfirmPassword;
+    public UserSignUpModel() {
     }
 
-    public String getSignUpEmail() {
-        return signUpEmail;
+    public UserSignUpModel(String email, String userName, String password, String userKey) {
+        this.email = email;
+        this.userName = userName;
+        this.password = password;
+        this.userKey = userKey;
     }
 
-    public void setSignUpEmail(String signUpEmail) {
-        this.signUpEmail = signUpEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public String getSignUpUserName() {
-        return signUpUserName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setSignUpUserName(String signUpUserName) {
-        this.signUpUserName = signUpUserName;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getSignUpPassword() {
-        return signUpPassword;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setSignUpPassword(String signUpPassword) {
-        this.signUpPassword = signUpPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public String getSignUpConfirmPassword() {
-        return signUpConfirmPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setSignUpConfirmPassword(String signUpConfirmPassword) {
-        this.signUpConfirmPassword = signUpConfirmPassword;
+    public String getUserKey() {
+        return userKey;
     }
 
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
+    }
 }

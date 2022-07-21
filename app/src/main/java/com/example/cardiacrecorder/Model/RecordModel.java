@@ -6,6 +6,7 @@ public class RecordModel {
 //    public String name;
 
     public String date;
+    public String times;
     public String timestamp;
     public String heartrate;
     public String systolic;
@@ -20,26 +21,16 @@ public class RecordModel {
         this.heartrate = heartrate;
     }
 
-    public RecordModel(String date, String timestamp, String heartrate, String systolic, String diastolic, String comment) {
 
-//        this.name = name;
-
+    public RecordModel(String date, String times, String timestamp, String heartrate, String systolic, String diastolic, String comment) {
         this.date = date;
+        this.times = times;
         this.timestamp = timestamp;
         this.heartrate = heartrate;
         this.systolic = systolic;
         this.diastolic = diastolic;
         this.comment = comment;
     }
-
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
 
     public String getDate() {
         return date;
@@ -87,5 +78,13 @@ public class RecordModel {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getTimes() {
+        return times;
+    }
+
+    public void setTimes(String times) {
+        this.times = times;
     }
 }

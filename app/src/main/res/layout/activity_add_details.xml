@@ -3,154 +3,183 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
     android:orientation="vertical"
-    tools:context=".Activity.AddDetailsActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CardiacRecord"
-        android:textColor="#4F60FA"
+    tools:context=".Activity.AddDetailsActivity"
+    android:gravity="center"
 
-        android:textSize="50sp">
-
-    </TextView>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/DateLayout"
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
+    >
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
-        android:layout_marginTop="34dp"
+        android:id="@+id/scrollbar"
+        >
 
-        android:hint="Date:">
 
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Date"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
 
 
-        </com.google.android.material.textfield.TextInputEditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="CardiacRecord"
+                android:textColor="#4F60FA"
+
+                android:textSize="40sp">
+
+            </TextView>
 
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/DateLayout"
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/TimeLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
 
-        android:layout_marginTop="10dp"
+                android:hint="Date:">
 
-        android:hint="Time:">
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputEditText>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/HeartrateLayout"
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            </com.google.android.material.textfield.TextInputLayout>
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TimeLayout"
 
-        android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        android:hint="Heart Rate:">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Heartrate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                android:layout_marginTop="10dp"
 
-    </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Time:">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/SystolicLayout"
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            </com.google.android.material.textfield.TextInputLayout>
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/HeartrateLayout"
 
-        android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        android:hint="Systolic:">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Systolic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                android:layout_marginTop="10dp"
 
-    </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Heart Rate:">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/DiastolicLayout"
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Heartrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            </com.google.android.material.textfield.TextInputLayout>
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/SystolicLayout"
 
-        android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        android:hint="Diastolic:">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Diastolic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                android:layout_marginTop="10dp"
 
-    </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Systolic:">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/CommentLayout"
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Systolic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            </com.google.android.material.textfield.TextInputLayout>
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/DiastolicLayout"
 
-        android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        android:hint="Comment:">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Comment"
-            android:layout_width="match_parent"
-            android:layout_height="120sp" />
+                android:layout_marginTop="10dp"
 
-    </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Diastolic:">
 
-    <Button
-        android:id="@+id/signupButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/buttonnew"
-        android:text="Save"
-        android:textSize="16dp"
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Diastolic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        android:textStyle="bold"
+            </com.google.android.material.textfield.TextInputLayout>
 
-        />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CommentLayout"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:hint="Comment:">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="120sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/addRecordButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonnew"
+                android:text="Save"
+                android:textSize="16dp"
+
+                android:textStyle="bold"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </LinearLayout>

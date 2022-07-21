@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -19,10 +20,25 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<RecordModel> usersList;
     private RecyclerView recyclerView;
     private ImageButton AddNewRecord;
+    private String userName,userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        Bundle b = intent.getExtras();
+        userName = b.get("UserName").toString();
+        userId = b.get("UserId").toString();
+
+
+
+
+
+
+
+
+
         recyclerView = findViewById(R.id.recyclerView);
         AddNewRecord = findViewById(R.id.addNewRecord);
 
@@ -35,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         AddNewRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AddDetailsActivity.class);
+                intent.putExtra("UserName",userName);
+                intent.putExtra("UserId",userId);
+
+                startActivity(intent);
 
             }
         });
