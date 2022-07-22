@@ -147,7 +147,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 UserSignUpModel userSignUpModel = new UserSignUpModel(email,userName,password,userKey);
                                 databaseReference.child(userKey).setValue(userSignUpModel);
 
-                                finish();
+
 
                                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                 intent.putExtra("UserId",userKey);
@@ -155,7 +155,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
 
-
+                                finish();
 
 
 

@@ -7,12 +7,14 @@
     android:layout_margin="5dp"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10px"
-        app:cardBackgroundColor="#C7FFC9"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"
+        app:cardElevation="20dp"
         app:cardCornerRadius="20px"
 
         >
@@ -36,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date: "
-                    android:textColor="@color/black"
+                    android:textColor="#292c30"
                     android:textSize="50px"
                     />
 
@@ -73,20 +75,22 @@
                         android:layout_height="wrap_content"
                         android:text="Systolic: "
                         android:textSize="50px"
-                        android:textColor="#F24E1E"
+                        android:textColor="#292c30"
                         >
 
                     </TextView>
                     <TextView
+                        android:id="@+id/sSystolic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="80"
                         android:textSize="50px"
                         android:textStyle="bold"
-                        android:textColor="#F24E1E"
+                        android:textColor="@color/black"
                         >
 
                     </TextView>
+
 
                 </LinearLayout>
 
@@ -98,25 +102,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginLeft="30px">
+                    android:layout_marginLeft="20px">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Distolic: "
                         android:textSize="50px"
-                        android:textColor="@color/black">
+                        android:textColor="#292c30">
 
                     </TextView>
                     <TextView
+                        android:id="@+id/sDiastolic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="120"
                         android:textSize="50px"
                         android:textStyle="bold"
-                        android:textColor="@color/black">
+                        android:textColor="@color/black"
+                        >
 
                     </TextView>
+
+
 
                 </LinearLayout>
 
@@ -139,7 +147,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Heart Rate: "
-                    android:textColor="@color/black"
+                    android:textColor="#292c30"
                     android:textSize="50px"
                     />
 
@@ -155,10 +163,11 @@
                     android:textStyle="bold"
                     />
 
+
             </LinearLayout>
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.cardiacrecorder.Activity;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +17,8 @@ public class InitialPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial_page);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         Button buttonLogin, buttonRegister;
 
@@ -27,7 +30,9 @@ public class InitialPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -36,8 +41,9 @@ public class InitialPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
             }
         });
 

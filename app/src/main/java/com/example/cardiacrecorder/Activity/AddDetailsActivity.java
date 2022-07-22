@@ -1,5 +1,6 @@
 package com.example.cardiacrecorder.Activity;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 
@@ -35,7 +36,8 @@ public class AddDetailsActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_details);
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         Intent intent = getIntent();
         Bundle b  = intent.getExtras();
