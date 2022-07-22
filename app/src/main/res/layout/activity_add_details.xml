@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             >
 
 
@@ -39,7 +39,6 @@
                 android:textSize="40sp">
 
             </TextView>
-
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/DateLayout"
@@ -56,8 +55,13 @@
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Date"
+                    android:inputType="date"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+
+                    >
+
+
 
 
                 </com.google.android.material.textfield.TextInputEditText>
@@ -80,6 +84,8 @@
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Time"
+
+                    android:inputType="time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -100,6 +106,7 @@
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Heartrate"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -120,6 +127,7 @@
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Systolic"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -140,30 +148,50 @@
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Diastolic"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/CommentLayout"
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               >
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/CommentLayout"
 
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
 
-                android:layout_marginTop="10dp"
+                   android:layout_marginTop="10dp"
 
-                android:hint="Comment:">
+                   android:hint="Comment:">
 
-                <!--this is the actual edit text which takes the input-->
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Comment"
-                    android:layout_width="match_parent"
-                    android:layout_height="120sp" />
+                   <!--this is the actual edit text which takes the input-->
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/Comment"
+                       android:layout_width="match_parent"
+                       android:layout_height="120sp" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <ProgressBar
+                   android:layout_marginStart="160dp"
+                   android:layout_marginVertical="30dp"
+                   android:id="@+id/progressbar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:indeterminateTint="#50555C"
+                   android:layout_marginTop="5dp"
+                   android:maxHeight="40dp"
+                   android:minHeight="40dp"
+                   ></ProgressBar>
+
+           </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/addRecordButton"

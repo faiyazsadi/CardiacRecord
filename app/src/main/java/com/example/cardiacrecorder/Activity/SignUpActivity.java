@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.cardiacrecorder.Model.UserSignUpModel;
@@ -31,11 +33,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private TextInputEditText signUpPassword;
     private TextInputEditText signUpConfirmPassword;
     private Button buttonSignUp;
-
+    private ScrollView scrollView;
 
 
     private FirebaseAuth mAuth;
-
+    private ProgressBar progressBar;
 
     DatabaseReference databaseReference;
 
@@ -61,11 +63,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         signUpPassword = findViewById(R.id.signUpPassword);
         signUpConfirmPassword = findViewById(R.id.signUpConfirmPassword);
         buttonSignUp = findViewById(R.id.signupButton);
+        scrollView = findViewById(R.id.scrollbar);
+        progressBar = findViewById(R.id.progressbar);
 
+        scrollView.setVerticalScrollBarEnabled(false);
+        scrollView.setHorizontalScrollBarEnabled(false);
 
 
         buttonSignUp.setOnClickListener(this);
-
+        progressBar.setVisibility(View.GONE);
 
 
     }
@@ -138,11 +144,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 if(!userName.isEmpty() && !email.isEmpty() && !password.isEmpty() && password.contains(confirmPass) && !confirmPass.isEmpty())
                 {
+                    progressBar.setVisibility(View.VISIBLE);
                     mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful())
                             {
+                                progressBar.setVisibility(View.GONE);
                                 String userKey = databaseReference.push().getKey();
                                 UserSignUpModel userSignUpModel = new UserSignUpModel(email,userName,password,userKey);
                                 databaseReference.child(userKey).setValue(userSignUpModel);

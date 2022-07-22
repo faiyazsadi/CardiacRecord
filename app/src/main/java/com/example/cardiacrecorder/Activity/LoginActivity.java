@@ -9,6 +9,8 @@ import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.cardiacrecorder.R;
@@ -29,8 +31,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextInputEditText loginEmail, loginPassword;
     private Button loginButton;
     private String  userName,userId;
-
-
+    private ScrollView scrollView;
+    private ProgressBar progressBar;
 
     DatabaseReference databaseReference;
 
@@ -48,8 +50,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginEmail = findViewById(R.id.LoginEmail);
         loginPassword = findViewById(R.id.loginPassword);
         loginButton = findViewById(R.id.LoginButton);
+        scrollView = findViewById(R.id.scrollbar);
+        progressBar = findViewById(R.id.progressbar);
 
-
+        scrollView.setVerticalScrollBarEnabled(false);
+        scrollView.setHorizontalScrollBarEnabled(false);
+        progressBar.setVisibility(View.GONE);
 
 
         loginButton.setOnClickListener(this);
@@ -90,7 +96,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
 
-
+        progressBar.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -98,6 +104,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                if(task.isSuccessful())
                {
+
+                   progressBar.setVisibility(View.GONE);
+
                    databaseReference.addValueEventListener(new ValueEventListener() {
                        @Override
                        public void onDataChange(@NonNull DataSnapshot snapshot) {
