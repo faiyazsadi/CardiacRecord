@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
         AddNewRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,37 +115,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*private void setAdapter() {
-        RecyclerAdapter adapter = new RecyclerAdapter(usersList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
-    }*/
 
-    /*private void setUserInfo() {
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-        usersList.add(new RecordModel("23-12-1999", "80"));
-    }*/
 }
