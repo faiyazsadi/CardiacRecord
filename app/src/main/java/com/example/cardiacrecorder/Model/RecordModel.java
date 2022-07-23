@@ -87,4 +87,12 @@ public class RecordModel {
     public void setTimes(String times) {
         this.times = times;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        RecordModel rhs = (RecordModel) obj;
+        return date == rhs.date && times == rhs.times && heartrate == rhs.heartrate && systolic == rhs.systolic && diastolic == rhs.diastolic && comment == rhs.comment;
+    }
 }
