@@ -54,7 +54,10 @@
         android:textColor="@color/black"
         app:strokeWidth="2dp"
         app:strokeColor="@color/black"
-        android:elevation="0dp"
+        android:elevation="1dp"
+        android:shadowColor="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineAmbientShadowColor="@android:color/transparent"
 
 
         android:backgroundTint="@android:color/transparent"

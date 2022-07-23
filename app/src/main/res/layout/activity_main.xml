@@ -27,11 +27,11 @@
 
     <ImageButton
         android:id="@+id/addNewRecord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="310dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="280dp"
 
-        android:layout_marginTop="597dp"
+        android:layout_marginTop="567dp"
         android:background="@android:color/transparent"
 
 
