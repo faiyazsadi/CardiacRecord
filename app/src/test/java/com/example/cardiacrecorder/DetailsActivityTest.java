@@ -1,4 +1,4 @@
-package com.example.cardiacrecorder.Activity;
+package com.example.cardiacrecorder;
 
 import static org.junit.Assert.*;
 

@@ -36,10 +36,6 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_details);
 
 
-
-
-
-
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
@@ -55,12 +51,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         userName = b.get("UserName").toString();
 
 
-
-
         databaseReference = FirebaseDatabase.getInstance().getReference("CardiacRecords").child(userId).child(recordId);
-
-
-
 
 
         date = findViewById(R.id.dateForDetails);
@@ -73,9 +64,6 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         deleteButton = findViewById(R.id.deleteRecordButtonDetails);
 
         saveButton = findViewById(R.id.saveForDetails);
-
-
-
 
 
 
@@ -134,15 +122,6 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         {
             diastolic.setTextColor(Color.RED);
         }
-
-
-
-
-
-
-
-
-
         saveButton.setOnClickListener(this);
         deleteButton.setOnClickListener(this);
 
@@ -170,6 +149,11 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    /**
+     * This method updates a specific record which is edited by the user.
+     * @param
+     * @return
+     */
     private void EditDetails() {
         String Heart = heartRate.getText().toString().trim();
         String Sys = systolic.getText().toString().trim();
