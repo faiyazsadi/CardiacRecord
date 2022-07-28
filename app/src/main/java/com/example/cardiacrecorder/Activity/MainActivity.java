@@ -41,10 +41,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
-        userName = b.get("UserName").toString();
-        userId = b.get("UserId").toString();
+
+        if(b!=null)
+        {
+
+            userName = b.get("UserName").toString();
+            userId = b.get("UserId").toString();
+        }
+        else
+        {
+            userName = "User";
+            userId = "-N7Wb6nnu7jtWJIfNjcc";
+        }
+
+
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference("CardiacRecords").child(userId);
