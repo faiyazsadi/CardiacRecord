@@ -29,3 +29,8 @@ jobs:
     - name: Android Test Report
       uses: asadmansr/android-test-report-action@v1.2.0
       if: ${{ always() }}
+    - name: Android Emulator Runner
+      uses: ReactiveCircus/android-emulator-runner@v2.25.0
+      with:
+          api-level: 31
+          script: ./gradlew connectedCheck
